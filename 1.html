@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function test() {
+//            document.write("<h1>This is a heading</h1>");
+            var x = document.getElementById('test').value;
+            if (x == '' || isNaN(x)) {
+                alert('hello');
+            }
+        }
+    </script>
+</head>
+<body>
+<p>p...</p>
+<input id="test" type="text">
+<button onclick="test()">test...</button>
+</body>
+</html>
