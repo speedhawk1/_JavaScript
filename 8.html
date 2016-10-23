@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script>
-        //        alert('alert...');
-//        var b = confirm('confirm?');
-//        console.log(b);
-        var p = prompt('message...', 'asdf...');
-        console.log(p);
-    </script>
 </head>
 <body>
-
+<div id="test"></div>
+<script>
+    var dob = new Date(prompt('birthday?', '1990-1-1'));
+    var dod = new Date(dob.setFullYear(dob.getFullYear() + 80));
+    function test() {
+        var today = new Date();
+        var seconds = Math.round((dod.getTime() - today.getTime()) / 1000);
+        document.getElementById('test').innerHTML = seconds + " seconds remained...";
+        setTimeout('test()', 500);
+    }
+    test();
+</script>
 </body>
 </html>
