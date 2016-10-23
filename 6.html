@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function check() {
+            var x = document.getElementById('email').value;
+            console.log(x);
+            if (x == '') {
+                alert('Email required.');
+                // check email...
+                return false;document.getta
+            } else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="http://baidu.com" onsubmit="return check()">
+    <input id="email" type="text" placeholder="EMAIL">
+    <input type="submit" value="SUBMIT">
+</form>
+</body>
+</html>

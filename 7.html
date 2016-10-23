@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            color: #fff;
+            font-size: 5em;
+            width: 500px;
+            height: 300px;
+            background: #f00;
+        }
+    </style>
+    <script>
+        function test() {
+            document.getElementsByTagName('div')[0].innerHTML = 'changed...';
+        }
+    </script>
+</head>
+<body>
+<div onmouseover="test()">mouse over...</div>
+</body>
+</html>
