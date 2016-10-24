@@ -26,10 +26,10 @@
 //    var pattern = /10{2,5}/g;
 //    var pattern = /10{2,}/g;
 //    var pattern = /a$/g;
-    var pattern = /^h/g;
+    var pattern = /^[\w.-]+@[A-z\d.-]+\.[A-z]{2,10}$/; // \w
 
-    var string = 'hello worldwo !ABCD10023100045100000.阿斯大法 a';
-    console.log(string.match(pattern));
+    var string = 'test_er.com-@tes098t-cn.net.mobile';
+    console.log(pattern.test(string));
 </script>
 
 <pre>
