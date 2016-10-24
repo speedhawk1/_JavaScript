@@ -5,15 +5,13 @@
     <title>Title</title>
     <script>
         function check() {
-            var x = document.getElementById('email').value;
-            console.log(x);
-            if (x == '') {
-                alert('Email required.');
-                // check email...
-                return false;document.getta
-            } else {
+            var emailInput = document.getElementById('email');
+            if (emailInput.value != '' && /^[\w.-]+@[A-z\d.-]+\.[A-z]{2,10}$/.test(emailInput.value)) {
                 return true;
             }
+            alert('email is required or email is invalid.')
+            emailInput.focus();
+            return false;
         }
     </script>
 </head>
